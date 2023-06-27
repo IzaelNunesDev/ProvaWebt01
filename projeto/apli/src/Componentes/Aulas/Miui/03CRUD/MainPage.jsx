@@ -10,7 +10,7 @@ import ListarAluno from './aluno/ListarAluno'
 import EditarAluno from './aluno/EditarAluno'
 import ListaAprovado from './aluno/ListaAprovado'
 
-
+//Neste Arquivo foi apenas adicionado uma rota para alunos aprovados
 
 const MainPage = () => {
     return (
