@@ -30,11 +30,10 @@ const StyledTableRow = styled(TableRow)(({ theme }) => ({
 
 
  function ListarAlunoAprovados() {
-
     const [alunos, setAlunos] = useState([]);
     let contador = 0;
     let media = 0;
-  
+  //Em um loop for, percorre o array alunos e soma os valores da propriedade ira de cada aluno à variável contador.
     console.log(alunos)
     for (let i = 0; i < alunos.length; i++) {
       
@@ -42,6 +41,8 @@ const StyledTableRow = styled(TableRow)(({ theme }) => ({
     }
     media = contador / alunos.length;
     console.log(media)
+     //uma requisição HTTP GET usando a biblioteca axios para obter uma lista de alunos 
+     //a partir do endpoint 'http://localhost:3001/aluno/listar'
     useEffect(
         () => {
             axios.get('http://localhost:3001/aluno/listar')
@@ -56,7 +57,8 @@ const StyledTableRow = styled(TableRow)(({ theme }) => ({
         },
         []
     )
-
+    //A variável aprovados é criada aplicando o método filter ao array alunos, filtrando 
+    //apenas os alunos cujo valor da propriedade ira seja maior que a média
     const aprovados = alunos.filter(aluno => aluno.ira > media)
     function deleteAluno(id) {
         if (window.confirm("Deseja Excluir?" + id)) {
