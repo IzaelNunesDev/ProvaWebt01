@@ -27,7 +27,7 @@ const Cadastrar = () => {
     }
 
 
-
+    //re-implementado o select para alunos baseado no de titulação
     return (
         <>
             <Typography variant="h5" fontWeight="bold">
@@ -49,7 +49,7 @@ const Cadastrar = () => {
                 />
             
 
-
+            
             <FormControl fullWidth sx={{ mt: 2 }}>
                     <InputLabel id="select-tit-label">Curso</InputLabel>
                     <Select
